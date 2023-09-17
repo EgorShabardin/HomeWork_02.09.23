@@ -25,7 +25,7 @@ namespace ДЗ_02._09._23
             Console.WriteLine("{0, 98}", "ЗАДАНИЕ №2. ПРОГРАММА ПОЛУЧАЕТ ДВА ЧИСЛА, МЕНЯЕТ ИХ МЕСТАМИ И ВЫВОДИТ НА ЭКРАН");
             Console.WriteLine();
 
-            double firstNumber, secondNumber;
+            double firstNumber, secondNumber, thirdNumber;
             bool firstResult, secondResult;
 
             Console.Write("Введите первое число: ");
@@ -35,8 +35,11 @@ namespace ДЗ_02._09._23
 
             if (firstResult && secondResult)
             {
+                thirdNumber = firstNumber;
+                firstNumber = secondNumber;
+                secondNumber = thirdNumber;
                 Console.WriteLine("Числа поменялись местами");
-                Console.WriteLine($"Первое число: {secondNumber} Второе число: {firstNumber}");
+                Console.WriteLine($"Первое число: {firstNumber} Второе число: {secondNumber}");
             }
             else
             {
@@ -164,16 +167,13 @@ namespace ДЗ_02._09._23
             thirdValue = RandomNumbers.Next(100);
             fourthValue = RandomNumbers.Next(100);
 
-            Console.WriteLine($"Первое число: {firstValue}");
-            Console.WriteLine($"Второе число: {secondValue}");
-            Console.WriteLine($"Третье число: {thirdValue}");
-            Console.WriteLine($"Четвертое число: {fourthValue}");
+            Console.WriteLine($"Первое число: {firstValue}, второе число: {secondValue}, третье число: {thirdValue}, четвертое число: {fourthValue}");
 
 
             // Задание №8. Программа получает одно трехзначное число и преобразует его в другое.
             Console.WriteLine();
             Console.WriteLine();
-            Console.WriteLine("{0, 96}", "ЗАДАНИЕ №8. ПРОГРАММА ПОЛУЧАЕТ ОДНО ТРЕХЗНАЧЕНИЕ ЧИСЛО И ПРЕОБРАЗУЕТ ЕГО В ДРУГОЕ");
+            Console.WriteLine("{0, 96}", "ЗАДАНИЕ №8. ПРОГРАММА ПОЛУЧАЕТ ОДНО ТРЕХЗНАЧЕНОЕ ЧИСЛО И ПРЕОБРАЗУЕТ ЕГО В ДРУГОЕ");
             Console.WriteLine();
 
             int value;
@@ -211,6 +211,7 @@ namespace ДЗ_02._09._23
             summ = (firstProduct * firstPrice) + (secondProduct * secondPrice) + (thirdProduct * thirdPrice);
 
             Console.WriteLine($"Если купить {firstProduct} кг конфет, {secondProduct} кг печенья и {thirdProduct} кг яблок, нужно заплатить {summ} рублей");
+            Console.WriteLine();
         }
     }
 }
